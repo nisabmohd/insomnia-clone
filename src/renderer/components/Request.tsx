@@ -136,6 +136,71 @@ export default function Request({ request }: RequestProps) {
         }}
       >
         {/* Body */}
+        <div
+          className="tabs"
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: '18px',
+            marginLeft: '15px',
+            fontSize: '12px',
+            height: '100%',
+          }}
+        >
+          <div
+            style={{
+              color: '#b1b0b0',
+              padding: '0 8px',
+              height: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              cursor: 'pointer',
+            }}
+          >
+            Body
+          </div>
+          <div
+            style={{
+              color: '#b1b0b0',
+              padding: '0 8px',
+              height: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              cursor: 'pointer',
+            }}
+          >
+            Auth
+          </div>
+          <div
+            style={{
+              color: '#b1b0b0',
+              padding: '0 8px',
+              height: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              cursor: 'pointer',
+            }}
+          >
+            Query
+          </div>
+          <div
+            style={{
+              color: '#b1b0b0',
+              padding: '0 8px',
+              height: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              cursor: 'pointer',
+            }}
+          >
+            Headers
+          </div>
+        </div>
       </div>
       <div
         className="rest"

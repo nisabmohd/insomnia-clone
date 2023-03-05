@@ -88,6 +88,7 @@ function RequestName({ id, method, name }: savedRequests) {
           color: COLOR_MAP.get(method),
           width: '55px',
           fontSize: '11.28px',
+          fontWeight: 'bold',
         }}
       >
         {method.toUpperCase()}
@@ -96,6 +97,7 @@ function RequestName({ id, method, name }: savedRequests) {
         style={{
           color: 'gray',
           fontSize: '11.8px',
+          fontWeight: 'bold',
         }}
       >
         {name}

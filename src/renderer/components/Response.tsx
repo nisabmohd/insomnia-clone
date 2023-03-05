@@ -9,7 +9,6 @@ export default function Response({ response }: ResponseProps) {
   return (
     <div style={{ flex: 1, height: '100%', overflowY: 'auto' }}>
       <div
-        className="input_url"
         style={{
           width: '100%',
           height: '30px',
@@ -21,11 +20,11 @@ export default function Response({ response }: ResponseProps) {
           borderTop: '1px solid rgb(64 64 70)',
         }}
       >
-        {JSON.stringify(response.code)}
-        {/*  */}
+        <p style={{ marginLeft: '24px', fontSize: '12px', color: 'gray' }}>
+          {JSON.stringify(response?.code) || '200 status'}
+        </p>
       </div>
       <div
-        className="input_url"
         style={{
           width: '100%',
           height: '30px',
@@ -36,7 +35,58 @@ export default function Response({ response }: ResponseProps) {
           borderBottom: '1px solid rgb(64 64 70)',
         }}
       >
-        {/* Body */}
+        <div
+          className="tabs"
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            gap: '18px',
+            marginLeft: '15px',
+            fontSize: '12px',
+            height: '100%',
+          }}
+        >
+          <div
+            style={{
+              color: '#b1b0b0',
+              padding: '0 8px',
+              height: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              cursor: 'pointer',
+            }}
+          >
+            Preview
+          </div>
+          <div
+            style={{
+              color: '#b1b0b0',
+              padding: '0 8px',
+              height: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              cursor: 'pointer',
+            }}
+          >
+            Headers
+          </div>
+          <div
+            style={{
+              color: '#b1b0b0',
+              padding: '0 8px',
+              height: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              cursor: 'pointer',
+            }}
+          >
+            Cookies
+          </div>
+        </div>
       </div>
       <div
         className="response"
@@ -62,21 +112,6 @@ export default function Response({ response }: ResponseProps) {
         >
           {JSON.stringify(response, null, 2)}
         </SyntaxHighlighter>
-      </div>
-      <div
-        className="input_url"
-        style={{
-          width: '100%',
-          height: '30px',
-          display: 'flex',
-          flexDirection: 'row',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          borderBottom: '1px solid rgb(64 64 70)',
-          borderTop: '1px solid rgb(64 64 70)',
-        }}
-      >
-        {/* Body */}
       </div>
     </div>
   );
